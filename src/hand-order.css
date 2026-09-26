@@ -1,0 +1,227 @@
+.hand-heading > .hand-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  flex: none;
+}
+.hand-tools .sort-control {
+  margin: 0;
+}
+.reorder-toggle {
+  border: 1px solid #515d69;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 2px 9px;
+  white-space: nowrap;
+  color: #d0d9e2;
+}
+.reorder-toggle:hover {
+  background: #303a44;
+}
+.reorder-toggle[aria-pressed='true'] {
+  border-color: #78bbdc;
+  background: #223a49;
+  color: #c0e9ff;
+}
+.reorder-toggle:disabled {
+  opacity: 0.4;
+}
+.is-reordering .game-card.art-card {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: grab;
+}
+.is-reordering button.game-card.art-card:hover {
+  transform: none;
+}
+.is-reordering .game-card.art-card.move-selected {
+  outline: 3px solid #79c6ed;
+  outline-offset: 2px;
+  transform: none;
+  box-shadow: 0 0 20px #5ea7cc25;
+}
+.is-reordering .game-card.art-card.drag-source {
+  opacity: 0.3;
+  cursor: grabbing;
+}
+.is-reordering .game-card.art-card.drop-target {
+  outline: 3px dashed #b9e8ff;
+  outline-offset: 3px;
+}
+.is-reordering .game-card.art-card.drop-target:after {
+  content: 'ここへ移動';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  height: auto;
+  background: #1a354a99;
+  color: #fff;
+  border-radius: inherit;
+  font-size: 12px;
+  font-weight: 600;
+}
+.hand-position {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 10px;
+  background: #1b3145e8;
+  color: #d1eeff;
+  border: 1px solid #8dbad2;
+  pointer-events: none;
+}
+.reorder-arrows {
+  display: flex;
+  gap: 8px;
+  flex: none;
+}
+.reorder-arrows .secondary-button {
+  min-height: 40px;
+  padding: 7px 14px;
+  gap: 8px;
+  font-size: 12px;
+}
+.reorder-dock > .primary-button {
+  min-width: 140px;
+  min-height: 42px;
+  padding: 9px 18px;
+}
+.reorder-dock .turn-instruction > div > span {
+  white-space: normal;
+}
+.reorder-drag-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  overflow: hidden;
+  pointer-events: none;
+}
+.game-card.art-card.reorder-ghost {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.95;
+  box-shadow: 0 16px 40px #0009;
+  transition: none;
+  will-change: transform;
+}
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%);
+  white-space: nowrap !important;
+}
+@media (max-width: 700px) {
+  .hand-heading > .hand-tools {
+    gap: 6px;
+  }
+  .hand-tools .sort-control > span {
+    display: none;
+  }
+  .hand-tools select {
+    max-width: 90px;
+    padding: 3px 4px;
+  }
+  .reorder-toggle {
+    font-size: 11px;
+    line-height: 19px;
+    padding: 1px 6px;
+  }
+  .hand-position {
+    width: 16px;
+    height: 16px;
+    font-size: 8px;
+    line-height: 16px;
+    top: 4px;
+  }
+  .reorder-dock {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+  .reorder-arrows {
+    gap: 6px;
+    min-width: 0;
+  }
+  .reorder-arrows .secondary-button {
+    flex: 1;
+    min-width: 0;
+    min-height: 40px;
+    padding: 5px;
+    font-size: 11px;
+    gap: 4px;
+  }
+  .reorder-dock > .primary-button {
+    min-width: 0;
+    min-height: 40px;
+    font-size: 11px;
+    padding: 7px;
+  }
+  .is-reordering .game-card.art-card.drop-target:after {
+    font-size: 9px;
+  }
+}
+@media (max-width: 559px) and (max-height: 640px) {
+  .hand-tools select {
+    max-width: 82px;
+  }
+  .reorder-toggle {
+    font-size: 9px;
+    padding: 0 5px;
+    line-height: 19px;
+  }
+  .hand-heading > .hand-tools {
+    gap: 5px;
+  }
+  .reorder-arrows .secondary-button,
+  .reorder-dock > .primary-button {
+    min-height: 37px;
+    font-size: 9px;
+  }
+  .hand-position {
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 7px;
+    top: 3px;
+  }
+}
+@media (max-height: 500px) and (min-width: 560px) {
+  .reorder-toggle {
+    font-size: 9px;
+    line-height: 17px;
+    padding: 0 5px;
+  }
+  .reorder-dock > .primary-button {
+    min-width: 80px;
+    min-height: 36px;
+    font-size: 10px;
+  }
+  .reorder-arrows .secondary-button {
+    min-height: 36px;
+    padding: 5px 9px;
+    font-size: 9px;
+  }
+  .reorder-arrows {
+    gap: 5px;
+  }
+  .hand-position {
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 7px;
+    top: 3px;
+  }
+}

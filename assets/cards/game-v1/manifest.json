@@ -1,0 +1,630 @@
+{
+  "version": 1,
+  "scope": "58 vehicle/color artworks and 4 supports covering all 88 gameplay cards, plus the Grand Prix dealer order",
+  "cards": [
+    {
+      "key": "86-red",
+      "type": "vehicle",
+      "modelId": "86",
+      "colorId": "red",
+      "name": "86 GT・赤",
+      "source": "assets/cards/production-v1/86-red-v1.png",
+      "image": "/assets/cards/game-v1/86-red.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/86-red.jpg"
+    },
+    {
+      "key": "86-blue",
+      "type": "vehicle",
+      "modelId": "86",
+      "colorId": "blue",
+      "name": "86 GT・青",
+      "source": "assets/cards/color-variants-v1/86-blue-v1.png",
+      "image": "/assets/cards/game-v1/86-blue.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/86-blue.jpg"
+    },
+    {
+      "key": "86-white",
+      "type": "vehicle",
+      "modelId": "86",
+      "colorId": "white",
+      "name": "86 GT・白",
+      "source": "assets/cards/color-variants-v1/86-white-v1.png",
+      "image": "/assets/cards/game-v1/86-white.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/86-white.jpg"
+    },
+    {
+      "key": "86-black",
+      "type": "vehicle",
+      "modelId": "86",
+      "colorId": "black",
+      "name": "86 GT・黒",
+      "source": "assets/cards/color-variants-v1/86-black-v1.png",
+      "image": "/assets/cards/game-v1/86-black.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/86-black.jpg"
+    },
+    {
+      "key": "86-yellow",
+      "type": "vehicle",
+      "modelId": "86",
+      "colorId": "yellow",
+      "name": "86 GT・黄",
+      "source": "assets/cards/color-variants-v1/86-yellow-v1.png",
+      "image": "/assets/cards/game-v1/86-yellow.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/86-yellow.jpg"
+    },
+    {
+      "key": "supra-black",
+      "type": "vehicle",
+      "modelId": "supra",
+      "colorId": "black",
+      "name": "GR SUPRA・黒",
+      "source": "assets/cards/production-v1/supra-black-v1.png",
+      "image": "/assets/cards/game-v1/supra-black.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/supra-black.jpg"
+    },
+    {
+      "key": "supra-yellow",
+      "type": "vehicle",
+      "modelId": "supra",
+      "colorId": "yellow",
+      "name": "GR SUPRA・黄",
+      "source": "assets/cards/color-variants-v1/supra-yellow-v1.png",
+      "image": "/assets/cards/game-v1/supra-yellow.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/supra-yellow.jpg"
+    },
+    {
+      "key": "supra-red",
+      "type": "vehicle",
+      "modelId": "supra",
+      "colorId": "red",
+      "name": "GR SUPRA・赤",
+      "source": "assets/cards/color-variants-v1/supra-red-v1.png",
+      "image": "/assets/cards/game-v1/supra-red.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/supra-red.jpg"
+    },
+    {
+      "key": "supra-blue",
+      "type": "vehicle",
+      "modelId": "supra",
+      "colorId": "blue",
+      "name": "GR SUPRA・青",
+      "source": "assets/cards/color-variants-v1/supra-blue-v1.png",
+      "image": "/assets/cards/game-v1/supra-blue.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/supra-blue.jpg"
+    },
+    {
+      "key": "supra-white",
+      "type": "vehicle",
+      "modelId": "supra",
+      "colorId": "white",
+      "name": "GR SUPRA・白",
+      "source": "assets/cards/color-variants-v1/supra-white-v1.png",
+      "image": "/assets/cards/game-v1/supra-white.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/supra-white.jpg"
+    },
+    {
+      "key": "a110-blue",
+      "type": "vehicle",
+      "modelId": "a110",
+      "colorId": "blue",
+      "name": "A110・青",
+      "source": "assets/cards/production-v1/a110-blue-v1.png",
+      "image": "/assets/cards/game-v1/a110-blue.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/a110-blue.jpg"
+    },
+    {
+      "key": "a110-white",
+      "type": "vehicle",
+      "modelId": "a110",
+      "colorId": "white",
+      "name": "A110・白",
+      "source": "assets/cards/color-variants-v1/a110-white-v1.png",
+      "image": "/assets/cards/game-v1/a110-white.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/a110-white.jpg"
+    },
+    {
+      "key": "a110-black",
+      "type": "vehicle",
+      "modelId": "a110",
+      "colorId": "black",
+      "name": "A110・黒",
+      "source": "assets/cards/color-variants-v1/a110-black-v1.png",
+      "image": "/assets/cards/game-v1/a110-black.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/a110-black.jpg"
+    },
+    {
+      "key": "a110-yellow",
+      "type": "vehicle",
+      "modelId": "a110",
+      "colorId": "yellow",
+      "name": "A110・黄",
+      "source": "assets/cards/color-variants-v1/a110-yellow-v1.png",
+      "image": "/assets/cards/game-v1/a110-yellow.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/a110-yellow.jpg"
+    },
+    {
+      "key": "a110-red",
+      "type": "vehicle",
+      "modelId": "a110",
+      "colorId": "red",
+      "name": "A110・赤",
+      "source": "assets/cards/color-variants-v1/a110-red-v1.png",
+      "image": "/assets/cards/game-v1/a110-red.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/a110-red.jpg"
+    },
+    {
+      "key": "exige-yellow",
+      "type": "vehicle",
+      "modelId": "exige",
+      "colorId": "yellow",
+      "name": "EXIGE・黄",
+      "source": "assets/cards/production-v1/exige-yellow-v1.png",
+      "image": "/assets/cards/game-v1/exige-yellow.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/exige-yellow.jpg"
+    },
+    {
+      "key": "exige-red",
+      "type": "vehicle",
+      "modelId": "exige",
+      "colorId": "red",
+      "name": "EXIGE・赤",
+      "source": "assets/cards/color-variants-v1/exige-red-v1.png",
+      "image": "/assets/cards/game-v1/exige-red.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/exige-red.jpg"
+    },
+    {
+      "key": "exige-blue",
+      "type": "vehicle",
+      "modelId": "exige",
+      "colorId": "blue",
+      "name": "EXIGE・青",
+      "source": "assets/cards/color-variants-v1/exige-blue-v1.png",
+      "image": "/assets/cards/game-v1/exige-blue.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/exige-blue.jpg"
+    },
+    {
+      "key": "exige-white",
+      "type": "vehicle",
+      "modelId": "exige",
+      "colorId": "white",
+      "name": "EXIGE・白",
+      "source": "assets/cards/color-variants-v1/exige-white-v1.png",
+      "image": "/assets/cards/game-v1/exige-white.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/exige-white.jpg"
+    },
+    {
+      "key": "exige-black",
+      "type": "vehicle",
+      "modelId": "exige",
+      "colorId": "black",
+      "name": "EXIGE・黒",
+      "source": "assets/cards/color-variants-v1/exige-black-v1.png",
+      "image": "/assets/cards/game-v1/exige-black.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/exige-black.jpg"
+    },
+    {
+      "key": "4c-white",
+      "type": "vehicle",
+      "modelId": "4c",
+      "colorId": "white",
+      "name": "4C・白",
+      "source": "assets/cards/production-v1/4c-white-v1.png",
+      "image": "/assets/cards/game-v1/4c-white.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/4c-white.jpg"
+    },
+    {
+      "key": "4c-black",
+      "type": "vehicle",
+      "modelId": "4c",
+      "colorId": "black",
+      "name": "4C・黒",
+      "source": "assets/cards/color-variants-v1/4c-black-v1.png",
+      "image": "/assets/cards/game-v1/4c-black.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/4c-black.jpg"
+    },
+    {
+      "key": "4c-yellow",
+      "type": "vehicle",
+      "modelId": "4c",
+      "colorId": "yellow",
+      "name": "4C・黄",
+      "source": "assets/cards/color-variants-v1/4c-yellow-v1.png",
+      "image": "/assets/cards/game-v1/4c-yellow.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/4c-yellow.jpg"
+    },
+    {
+      "key": "4c-red",
+      "type": "vehicle",
+      "modelId": "4c",
+      "colorId": "red",
+      "name": "4C・赤",
+      "source": "assets/cards/color-variants-v1/4c-red-v1.png",
+      "image": "/assets/cards/game-v1/4c-red.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/4c-red.jpg"
+    },
+    {
+      "key": "4c-blue",
+      "type": "vehicle",
+      "modelId": "4c",
+      "colorId": "blue",
+      "name": "4C・青",
+      "source": "assets/cards/color-variants-v1/4c-blue-v1.png",
+      "image": "/assets/cards/game-v1/4c-blue.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/4c-blue.jpg"
+    },
+    {
+      "key": "m4-red",
+      "type": "vehicle",
+      "modelId": "m4",
+      "colorId": "red",
+      "name": "M4・赤",
+      "source": "assets/cards/production-v1/m4-red-v1.png",
+      "image": "/assets/cards/game-v1/m4-red.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/m4-red.jpg"
+    },
+    {
+      "key": "m4-blue",
+      "type": "vehicle",
+      "modelId": "m4",
+      "colorId": "blue",
+      "name": "M4・青",
+      "source": "assets/cards/color-variants-v1/m4-blue-v1.png",
+      "image": "/assets/cards/game-v1/m4-blue.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/m4-blue.jpg"
+    },
+    {
+      "key": "m4-white",
+      "type": "vehicle",
+      "modelId": "m4",
+      "colorId": "white",
+      "name": "M4・白",
+      "source": "assets/cards/color-variants-v1/m4-white-v1.png",
+      "image": "/assets/cards/game-v1/m4-white.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/m4-white.jpg"
+    },
+    {
+      "key": "m4-black",
+      "type": "vehicle",
+      "modelId": "m4",
+      "colorId": "black",
+      "name": "M4・黒",
+      "source": "assets/cards/color-variants-v1/m4-black-v1.png",
+      "image": "/assets/cards/game-v1/m4-black.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/m4-black.jpg"
+    },
+    {
+      "key": "m4-yellow",
+      "type": "vehicle",
+      "modelId": "m4",
+      "colorId": "yellow",
+      "name": "M4・黄",
+      "source": "assets/cards/color-variants-v1/m4-yellow-v1.png",
+      "image": "/assets/cards/game-v1/m4-yellow.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/m4-yellow.jpg"
+    },
+    {
+      "key": "gtr-black",
+      "type": "vehicle",
+      "modelId": "gtr",
+      "colorId": "black",
+      "name": "GT-R NISMO・黒",
+      "source": "assets/cards/production-v2/gtr-black-v2.png",
+      "image": "/assets/cards/game-v1/gtr-black.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/gtr-black.jpg"
+    },
+    {
+      "key": "gtr-yellow",
+      "type": "vehicle",
+      "modelId": "gtr",
+      "colorId": "yellow",
+      "name": "GT-R NISMO・黄",
+      "source": "assets/cards/color-variants-v1/gtr-yellow-v1.png",
+      "image": "/assets/cards/game-v1/gtr-yellow.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/gtr-yellow.jpg"
+    },
+    {
+      "key": "gtr-red",
+      "type": "vehicle",
+      "modelId": "gtr",
+      "colorId": "red",
+      "name": "GT-R NISMO・赤",
+      "source": "assets/cards/color-variants-v1/gtr-red-v1.png",
+      "image": "/assets/cards/game-v1/gtr-red.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/gtr-red.jpg"
+    },
+    {
+      "key": "gtr-blue",
+      "type": "vehicle",
+      "modelId": "gtr",
+      "colorId": "blue",
+      "name": "GT-R NISMO・青",
+      "source": "assets/cards/color-variants-v1/gtr-blue-v1.png",
+      "image": "/assets/cards/game-v1/gtr-blue.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/gtr-blue.jpg"
+    },
+    {
+      "key": "gtr-white",
+      "type": "vehicle",
+      "modelId": "gtr",
+      "colorId": "white",
+      "name": "GT-R NISMO・白",
+      "source": "assets/cards/color-variants-v1/gtr-white-v1.png",
+      "image": "/assets/cards/game-v1/gtr-white.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/gtr-white.jpg"
+    },
+    {
+      "key": "cayman-yellow",
+      "type": "vehicle",
+      "modelId": "cayman",
+      "colorId": "yellow",
+      "name": "718 CAYMAN S・黄",
+      "source": "assets/cards/production-v2/cayman-yellow-v2.png",
+      "image": "/assets/cards/game-v1/cayman-yellow.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/cayman-yellow.jpg"
+    },
+    {
+      "key": "cayman-red",
+      "type": "vehicle",
+      "modelId": "cayman",
+      "colorId": "red",
+      "name": "718 CAYMAN S・赤",
+      "source": "assets/cards/color-variants-v1/cayman-red-v1.png",
+      "image": "/assets/cards/game-v1/cayman-red.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/cayman-red.jpg"
+    },
+    {
+      "key": "cayman-blue",
+      "type": "vehicle",
+      "modelId": "cayman",
+      "colorId": "blue",
+      "name": "718 CAYMAN S・青",
+      "source": "assets/cards/color-variants-v1/cayman-blue-v1.png",
+      "image": "/assets/cards/game-v1/cayman-blue.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/cayman-blue.jpg"
+    },
+    {
+      "key": "cayman-white",
+      "type": "vehicle",
+      "modelId": "cayman",
+      "colorId": "white",
+      "name": "718 CAYMAN S・白",
+      "source": "assets/cards/color-variants-v1/cayman-white-v1.png",
+      "image": "/assets/cards/game-v1/cayman-white.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/cayman-white.jpg"
+    },
+    {
+      "key": "cayman-black",
+      "type": "vehicle",
+      "modelId": "cayman",
+      "colorId": "black",
+      "name": "718 CAYMAN S・黒",
+      "source": "assets/cards/color-variants-v1/cayman-black-v1.png",
+      "image": "/assets/cards/game-v1/cayman-black.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/cayman-black.jpg"
+    },
+    {
+      "key": "gt3-red",
+      "type": "vehicle",
+      "modelId": "gt3",
+      "colorId": "red",
+      "name": "911 GT3・赤",
+      "source": "assets/cards/production-v2/gt3-red-v2.png",
+      "image": "/assets/cards/game-v1/gt3-red.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/gt3-red.jpg"
+    },
+    {
+      "key": "gt3-blue",
+      "type": "vehicle",
+      "modelId": "gt3",
+      "colorId": "blue",
+      "name": "911 GT3・青",
+      "source": "assets/cards/color-variants-v1/gt3-blue-v1.png",
+      "image": "/assets/cards/game-v1/gt3-blue.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/gt3-blue.jpg"
+    },
+    {
+      "key": "gt3-white",
+      "type": "vehicle",
+      "modelId": "gt3",
+      "colorId": "white",
+      "name": "911 GT3・白",
+      "source": "assets/cards/color-variants-v1/gt3-white-v1.png",
+      "image": "/assets/cards/game-v1/gt3-white.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/gt3-white.jpg"
+    },
+    {
+      "key": "gt3-black",
+      "type": "vehicle",
+      "modelId": "gt3",
+      "colorId": "black",
+      "name": "911 GT3・黒",
+      "source": "assets/cards/color-variants-v1/gt3-black-v1.png",
+      "image": "/assets/cards/game-v1/gt3-black.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/gt3-black.jpg"
+    },
+    {
+      "key": "gt3-yellow",
+      "type": "vehicle",
+      "modelId": "gt3",
+      "colorId": "yellow",
+      "name": "911 GT3・黄",
+      "source": "assets/cards/color-variants-v1/gt3-yellow-v1.png",
+      "image": "/assets/cards/game-v1/gt3-yellow.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/gt3-yellow.jpg"
+    },
+    {
+      "key": "nsx-blue",
+      "type": "vehicle",
+      "modelId": "nsx",
+      "colorId": "blue",
+      "name": "NSX・青",
+      "source": "assets/cards/production-v2/nsx-blue-v2.png",
+      "image": "/assets/cards/game-v1/nsx-blue.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/nsx-blue.jpg"
+    },
+    {
+      "key": "nsx-white",
+      "type": "vehicle",
+      "modelId": "nsx",
+      "colorId": "white",
+      "name": "NSX・白",
+      "source": "assets/cards/color-variants-v1/nsx-white-v1.png",
+      "image": "/assets/cards/game-v1/nsx-white.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/nsx-white.jpg"
+    },
+    {
+      "key": "nsx-black",
+      "type": "vehicle",
+      "modelId": "nsx",
+      "colorId": "black",
+      "name": "NSX・黒",
+      "source": "assets/cards/color-variants-v1/nsx-black-v1.png",
+      "image": "/assets/cards/game-v1/nsx-black.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/nsx-black.jpg"
+    },
+    {
+      "key": "nsx-yellow",
+      "type": "vehicle",
+      "modelId": "nsx",
+      "colorId": "yellow",
+      "name": "NSX・黄",
+      "source": "assets/cards/color-variants-v1/nsx-yellow-v1.png",
+      "image": "/assets/cards/game-v1/nsx-yellow.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/nsx-yellow.jpg"
+    },
+    {
+      "key": "nsx-red",
+      "type": "vehicle",
+      "modelId": "nsx",
+      "colorId": "red",
+      "name": "NSX・赤",
+      "source": "assets/cards/color-variants-v1/nsx-red-v1.png",
+      "image": "/assets/cards/game-v1/nsx-red.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/nsx-red.jpg"
+    },
+    {
+      "key": "488-white",
+      "type": "vehicle",
+      "modelId": "488",
+      "colorId": "white",
+      "name": "488 GTB・白",
+      "source": "assets/cards/production-v2/488-white-v2.png",
+      "image": "/assets/cards/game-v1/488-white.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/488-white.jpg"
+    },
+    {
+      "key": "488-black",
+      "type": "vehicle",
+      "modelId": "488",
+      "colorId": "black",
+      "name": "488 GTB・黒",
+      "source": "assets/cards/color-variants-v1/488-black-v1.png",
+      "image": "/assets/cards/game-v1/488-black.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/488-black.jpg"
+    },
+    {
+      "key": "488-yellow",
+      "type": "vehicle",
+      "modelId": "488",
+      "colorId": "yellow",
+      "name": "488 GTB・黄",
+      "source": "assets/cards/color-variants-v1/488-yellow-v1.png",
+      "image": "/assets/cards/game-v1/488-yellow.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/488-yellow.jpg"
+    },
+    {
+      "key": "488-red",
+      "type": "vehicle",
+      "modelId": "488",
+      "colorId": "red",
+      "name": "488 GTB・赤",
+      "source": "assets/cards/color-variants-v1/488-red-v1.png",
+      "image": "/assets/cards/game-v1/488-red.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/488-red.jpg"
+    },
+    {
+      "key": "huracan-blue",
+      "type": "vehicle",
+      "modelId": "huracan",
+      "colorId": "blue",
+      "name": "HURACÁN・青",
+      "source": "assets/cards/production-v2/huracan-blue-v2.png",
+      "image": "/assets/cards/game-v1/huracan-blue.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/huracan-blue.jpg"
+    },
+    {
+      "key": "huracan-white",
+      "type": "vehicle",
+      "modelId": "huracan",
+      "colorId": "white",
+      "name": "HURACÁN・白",
+      "source": "assets/cards/color-variants-v1/huracan-white-v1.png",
+      "image": "/assets/cards/game-v1/huracan-white.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/huracan-white.jpg"
+    },
+    {
+      "key": "huracan-black",
+      "type": "vehicle",
+      "modelId": "huracan",
+      "colorId": "black",
+      "name": "HURACÁN・黒",
+      "source": "assets/cards/color-variants-v1/huracan-black-v1.png",
+      "image": "/assets/cards/game-v1/huracan-black.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/huracan-black.jpg"
+    },
+    {
+      "key": "huracan-yellow",
+      "type": "vehicle",
+      "modelId": "huracan",
+      "colorId": "yellow",
+      "name": "HURACÁN・黄",
+      "source": "assets/cards/color-variants-v1/huracan-yellow-v1.png",
+      "image": "/assets/cards/game-v1/huracan-yellow.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/huracan-yellow.jpg"
+    },
+    {
+      "key": "support-oil",
+      "type": "support",
+      "supportId": "oil",
+      "name": "トヨタ純正オイル",
+      "source": "assets/cards/production-v1/support-oil-v1.png",
+      "image": "/assets/cards/game-v1/support-oil.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/support-oil.jpg"
+    },
+    {
+      "key": "support-flag",
+      "type": "support",
+      "supportId": "flag",
+      "name": "国旗デカール",
+      "source": "assets/cards/production-v2/support-flag-v1.png",
+      "image": "/assets/cards/game-v1/support-flag.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/support-flag.jpg"
+    },
+    {
+      "key": "support-tires",
+      "type": "support",
+      "supportId": "tires",
+      "name": "ハイグリップタイヤ",
+      "source": "assets/cards/production-v1/support-tires-v1.png",
+      "image": "/assets/cards/game-v1/support-tires.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/support-tires.jpg"
+    },
+    {
+      "key": "support-ecu",
+      "type": "support",
+      "supportId": "ecu",
+      "name": "スポーツECU",
+      "source": "assets/cards/production-v1/support-ecu-v1.png",
+      "image": "/assets/cards/game-v1/support-ecu.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/support-ecu.jpg"
+    },
+    {
+      "key": "dealer-order",
+      "type": "order",
+      "name": "ディーラーオーダー",
+      "source": "assets/cards/production-v2/dealer-order-v1.png",
+      "image": "/assets/cards/game-v1/dealer-order.jpg",
+      "thumb": "/assets/cards/game-v1/thumb/dealer-order.jpg"
+    }
+  ]
+}

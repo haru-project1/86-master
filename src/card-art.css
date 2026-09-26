@@ -1,0 +1,368 @@
+/* Full approved 2:3 artwork, shared by the table, hand, details and results. */
+.game-card.art-card {
+  padding: 0;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: 2/3;
+  background: #202328;
+  border: 0;
+  border-radius: 7px;
+  display: block;
+  text-align: left;
+  isolation: isolate;
+  box-shadow: 0 3px 9px #0005;
+  overflow: visible;
+  flex: none;
+}
+.game-card.art-card:after {
+  display: none;
+}
+.art-card .card-visual {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 2/3;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #242b32;
+}
+.art-card .vehicle-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+.card-setting-label,
+.card-multiplier-label {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+}
+/* The setting's shape beside text (hand status, card details). */
+.setting-icon {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  margin-right: 0.2em;
+  vertical-align: -0.2em;
+  flex: none;
+}
+.setting-paper {
+  fill: #ece9df;
+}
+.rarity-r .setting-paper {
+  fill: #eeede2;
+}
+.rarity-sr .setting-paper {
+  fill: #f6efd9;
+}
+.game-card.art-card.rarity-r {
+  box-shadow:
+    0 0 0 1px #94c3ec55,
+    0 4px 12px #062c5840;
+}
+.game-card.art-card.rarity-sr {
+  box-shadow:
+    0 0 0 1px #e3c27570,
+    0 4px 14px #b7892435;
+}
+.art-card .card-foil {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+.art-card.rarity-r .card-foil,
+.art-card.rarity-sr .card-foil {
+  opacity: 1;
+  background: linear-gradient(112deg, transparent 30%, #d5eeff12 41%, #fff8 48%, #c7ebff22 54%, transparent 65%);
+  background-size: 300% 100%;
+  animation: card-reflection 9s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+.art-card.rarity-sr .card-foil {
+  background-image: linear-gradient(
+    112deg,
+    transparent 28%,
+    #fff2a424 39%,
+    #ffcaff58 45%,
+    #ffffffa0 49%,
+    #aff8ec50 54%,
+    #ffe29822 60%,
+    transparent 69%
+  );
+  animation-duration: 11s;
+}
+.hand-card-slot:nth-child(2n) .card-foil {
+  animation-delay: -3s;
+}
+.hand-card-slot:nth-child(3n) .card-foil {
+  animation-delay: -6s;
+}
+@keyframes card-reflection {
+  0%,
+  62% {
+    background-position: 150% 0;
+    opacity: 0;
+  }
+  68% {
+    opacity: 0.75;
+  }
+  86% {
+    opacity: 0.75;
+  }
+  100% {
+    background-position: -50% 0;
+    opacity: 0;
+  }
+}
+.shine-off .card-foil {
+  display: none;
+}
+#app:has(dialog[open]) main .card-foil {
+  animation-play-state: paused;
+}
+.game-card.art-card.selected {
+  outline: 3px solid #ff6346;
+  outline-offset: 2px;
+  box-shadow: 0 8px 24px #0007;
+  transform: translateY(-3px);
+}
+.game-card.art-card.linked:not(.selected) {
+  outline: 1px solid #9ebc8a;
+  outline-offset: 2px;
+}
+.game-card.art-card.locked {
+  opacity: 1;
+  cursor: not-allowed;
+}
+.art-card.locked .new-label {
+  background: #40536a;
+  color: #fff;
+}
+.art-card .selection-tick {
+  z-index: 3;
+  top: 6px;
+  right: 6px;
+  box-shadow: 0 1px 7px #0008;
+}
+.art-card .new-label {
+  z-index: 3;
+  top: -8px;
+  left: 5px;
+  font-size: 9px;
+  line-height: 17px;
+  padding: 0 5px;
+  white-space: nowrap;
+}
+.card-inspect {
+  font-size: 12px;
+  padding: 3px 0;
+  color: #acb7c4;
+  white-space: nowrap;
+}
+.card-inspect:hover {
+  color: #fff;
+}
+.deck-card {
+  background:
+    repeating-linear-gradient(132deg, transparent 0 12px, #ffffff03 13px 14px),
+    radial-gradient(ellipse at 40% 30%, #3d454f, #191d22 80%);
+}
+.deck-card:before {
+  border-color: #7b8079;
+  inset: 7px;
+}
+.history-card-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.catalog-car {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  text-align: left;
+  padding: 0;
+  min-width: 200px;
+}
+.catalog-car .catalog-thumb {
+  position: relative;
+  width: 58px;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  border-radius: 4px;
+  flex: none;
+  background: #252c31;
+}
+.catalog-car img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.catalog-car strong {
+  display: block;
+  font-size: 12px;
+}
+.catalog-car small {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+}
+.catalog-car .catalog-open {
+  font-size: 12px;
+  color: #c6ae82;
+  display: block;
+  margin-top: 4px;
+}
+.catalog-car:hover .catalog-open {
+  color: #ffdda5;
+}
+.catalog-supports {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.catalog-supports .rule-support {
+  margin: 0;
+  padding: 14px;
+  background: #1a1e23;
+  border: 1px solid #3c4148;
+}
+.catalog-supports .catalog-car {
+  min-width: 0;
+  gap: 10px;
+}
+.catalog-supports .catalog-car .catalog-thumb {
+  width: 54px;
+}
+.catalog-supports p {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.catalog-collection {
+  margin: 18px 0;
+  display: block;
+  color: #d8bb83;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.inspector-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+.inspector-details .eyebrow {
+  color: #ccaf7c;
+}
+.inspector-details h3 {
+  font-size: 24px;
+  margin: 7px 0;
+}
+.inspector-details dl {
+  margin: 20px 0;
+}
+.inspector-details dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid #343b44;
+  padding: 9px 0;
+  font-size: 12px;
+}
+.inspector-details dt {
+  color: var(--muted);
+}
+.inspector-details dd {
+  margin: 0;
+  text-align: right;
+}
+.inspector-details p {
+  line-height: 1.9;
+  font-size: 12px;
+}
+.inspector-details .inspector-current {
+  font-size: 20px;
+  color: #e4c68e;
+}
+.inspector-variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 20px;
+}
+.inspector-variants button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #505966;
+  border-radius: 4px;
+  padding: 7px 10px;
+  font-size: 12px;
+}
+.inspector-variants button[aria-pressed='true'] {
+  border-color: #ffc773;
+  background: #4c3c25;
+  color: #ffda99;
+}
+.inspector-variants i {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #a8a8a8;
+}
+.inspector-details .muted {
+  font-size: 12px;
+  color: var(--muted);
+}
+.inspector-back {
+  margin-bottom: 18px;
+}
+@media (max-width: 650px) {
+  .history-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px 12px;
+  }
+  .catalog-supports {
+    grid-template-columns: 1fr;
+  }
+  .catalog-car {
+    min-width: 187px;
+  }
+  .catalog-car .catalog-thumb {
+    width: 50px;
+  }
+  .inspector-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .inspector-card {
+    width: min(100%, 290px);
+    margin: auto;
+  }
+  .inspector-details h3 {
+    font-size: 21px;
+  }
+  .inspector-details dl {
+    margin: 12px 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .art-card .card-foil {
+    display: none;
+  }
+  .game-card.art-card.selected {
+    transform: none;
+  }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .art-card:hover .card-foil {
+    animation-duration: 3s;
+  }
+}

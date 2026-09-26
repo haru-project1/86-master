@@ -1,0 +1,140 @@
+/* Grand Prix: the dealer order card, the standings dialog and the final-round notice. */
+.game-card.art-card.rarity-sp {
+  box-shadow:
+    0 0 0 1px #f0cf8e99,
+    0 4px 16px #c9a45c40;
+}
+.live-card-status.order-status {
+  color: #f0cf8e;
+}
+.score-breakdown .delivered-row span,
+.revealed-breakdown .delivered-row span {
+  color: #f0cf8e;
+}
+.score-breakdown .delivered-row strong,
+.revealed-breakdown .delivered-row strong {
+  font-size: 12px;
+  font-weight: 500;
+  color: #d8b779;
+}
+
+.gp-lead {
+  margin-bottom: 12px !important;
+}
+.gp-champion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border: 1px solid #d4b579;
+  border-radius: 6px;
+  background: radial-gradient(ellipse at 20% 0, #71512744, transparent 70%), #2a261f;
+}
+.gp-champion .gp-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #f0cf8e;
+  object-fit: cover;
+}
+.gp-champion strong {
+  display: block;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 800;
+  color: #f5d693;
+}
+.gp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.gp-table th,
+.gp-table td {
+  padding: 7px 8px;
+  border-bottom: 1px solid #ffffff14;
+  text-align: right;
+  white-space: nowrap;
+}
+.gp-table th:nth-child(2),
+.gp-table thead th:first-child,
+.gp-table td:first-child {
+  text-align: left;
+}
+.gp-table thead th {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+}
+.gp-table tbody th {
+  font-weight: 600;
+  background: none;
+}
+.gp-table tr.mine {
+  background: #363027;
+}
+.gp-table tr.champion th,
+.gp-table tr.champion .gp-total {
+  color: #f5d693;
+}
+.gp-table .gp-total {
+  font-weight: 700;
+  font-size: 15px;
+}
+.gp-table .gp-master {
+  color: #f0cf8e;
+  font-weight: 700;
+}
+.gp-order-note {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin: 14px 0 8px;
+  padding: 10px 12px;
+  border: 1px solid #a9844a;
+  border-radius: 6px;
+  background: #322b20;
+}
+.gp-order-note .game-card.art-card {
+  width: 54px;
+}
+.gp-order-note p {
+  margin: 0;
+  font-size: 12px;
+  color: #d2c4af;
+}
+.gp-order-note strong {
+  display: block;
+  margin-bottom: 2px;
+  color: #f3d296;
+}
+
+.dealer-order-intro {
+  display: grid;
+  grid-template-columns: minmax(120px, 200px) 1fr;
+  gap: 22px;
+  align-items: center;
+}
+.dealer-order-intro .game-card.art-card {
+  width: 100%;
+}
+.dealer-order-intro .eyebrow {
+  color: #d8b779;
+}
+@media (max-width: 560px) {
+  .dealer-order-intro {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+  .dealer-order-intro .game-card.art-card {
+    width: 150px;
+  }
+  .gp-table th,
+  .gp-table td {
+    padding: 6px 5px;
+    font-size: 12px;
+  }
+}

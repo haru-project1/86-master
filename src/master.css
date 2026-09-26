@@ -1,0 +1,425 @@
+/* A special finish lives inside the existing single-screen layout. */
+.master-status,
+.master-status > span {
+  color: #f0ca83;
+}
+.strategy-summary.master-chase {
+  border-top-color: #a9844a;
+}
+.strategy-summary.master-chase > span {
+  color: #f0cf91;
+  font-weight: 600;
+}
+.master-plan {
+  border: 1px solid #a9844a;
+  background: #322b20;
+  padding: 12px 14px;
+  margin: 12px 0;
+  color: #f3d296;
+}
+.master-plan p {
+  margin: 5px 0 0;
+  color: #d2c4af;
+}
+.central-score.master-ready > strong {
+  color: #f4cf89;
+  text-shadow: 0 0 22px #f0b54244;
+}
+.action-dock .master-confirm {
+  background: linear-gradient(115deg, #f5d99f, #d2a35d);
+  color: #231b0e;
+  box-shadow:
+    0 0 0 1px #ffdfad80,
+    0 0 20px #e7af4930;
+}
+.master-finish .finish-heading {
+  border-bottom: 1px solid #d1aa62;
+  padding-bottom: 12px;
+  position: relative;
+  isolation: isolate;
+}
+.master-finish .finish-heading:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, #ad722820, transparent 70%);
+  animation: master-arrive 1.2s ease-out both;
+  pointer-events: none;
+}
+.master-finish .finish-heading h1 {
+  font-size: clamp(24px, 3.2vw, 40px);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0.07em;
+  line-height: 1.1;
+  color: #f5d693;
+  text-shadow: 0 2px 18px #d0a95840;
+}
+.master-finish .finish-heading .eyebrow {
+  color: #d8b779;
+}
+.master-finish .master-finish-note {
+  font-size: 12px;
+  color: #cdb991;
+  margin: 7px 0 0;
+}
+.master-finish .result-tabs strong {
+  font-size: clamp(13px, 1.7vw, 22px);
+}
+.master-winner {
+  border-color: #f0cf8e;
+  background: radial-gradient(ellipse at 50% 0, #71512722, transparent 70%), #1b1e22;
+  box-shadow: inset 0 0 25px #ba872010;
+}
+.master-winner .result-score {
+  color: #f0cf8e;
+}
+.master-winner .result-score > span {
+  font-size: 12px;
+}
+.master-winner .result-hand .game-card {
+  box-shadow:
+    0 0 0 1px #d6ab6655,
+    0 3px 12px #ac823322;
+}
+@keyframes master-arrive {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 700px) {
+  .master-finish .finish-heading {
+    padding-bottom: 7px;
+  }
+  .master-finish .finish-heading h1 {
+    font-size: 25px;
+  }
+  .master-finish .master-finish-note {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+  .master-finish .result-tabs strong {
+    font-size: 14px;
+  }
+  .master-winner .result-score > span {
+    font-size: 11px;
+  }
+  .strategy-summary.master-chase {
+    gap: 8px;
+  }
+}
+@media (max-height: 500px) and (min-width: 560px) {
+  .master-finish .finish-heading {
+    padding-bottom: 0;
+  }
+  .master-finish .finish-heading h1 {
+    font-size: 19px;
+  }
+  .master-finish .master-finish-note {
+    font-size: 9px;
+    line-height: 1;
+    margin-top: 2px;
+  }
+  .master-finish .finish-heading .eyebrow {
+    font-size: 9px;
+  }
+  .master-winner .result-score > span {
+    font-size: 9px;
+  }
+}
+/* The 86 MASTER celebration: a full-screen dialog over the results. */
+.master-show {
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  color: #f7ecd4;
+  background: #050608;
+}
+.master-show::backdrop {
+  background: #000;
+}
+.master-show-art,
+.master-show-shade,
+.master-show-rays,
+.master-show-sparks {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.master-show-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* The cars sit a little above the middle, clear of the card row. */
+  object-position: 50% 70%;
+  animation:
+    master-art-in 1.1s ease-out both,
+    master-art-drift 9s ease-out both;
+}
+/* Dark bands keep the title and the cards readable on any part of the art. */
+.master-show-shade {
+  background:
+    linear-gradient(to bottom, #050608e6 0%, #05060855 26%, transparent 42%),
+    linear-gradient(to top, #050608f2 0%, #05060899 22%, transparent 44%),
+    radial-gradient(ellipse at 50% 55%, transparent 45%, #05060899 100%);
+}
+.master-show-rays {
+  background: conic-gradient(
+    from 180deg at 50% -10%,
+    transparent 0deg 160deg,
+    #f3c46a1c 170deg,
+    transparent 176deg,
+    #f3c46a24 182deg,
+    transparent 190deg,
+    #f3c46a14 198deg,
+    transparent 206deg 360deg
+  );
+  mix-blend-mode: screen;
+  animation: master-rays 6s ease-in-out infinite alternate;
+}
+.master-show-sparks i {
+  position: absolute;
+  left: var(--x);
+  bottom: -12px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff4cf 0%, #f0c060 45%, transparent 70%);
+  box-shadow: 0 0 10px #f3c46a;
+  opacity: 0;
+  animation: master-spark var(--duration) linear var(--delay) infinite;
+}
+.master-show-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: max(28px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom));
+  text-align: center;
+}
+.master-show-eyebrow {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  color: #e5c27c;
+  animation: master-fade-up 0.7s ease-out 0.3s both;
+}
+.master-show h2 {
+  margin: 6px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.22em;
+  font-size: clamp(48px, 10vw, 128px);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  animation: master-title-in 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.45s both;
+}
+.master-show h2 span {
+  padding: 0 0.06em;
+  background: linear-gradient(100deg, #9a6a22 0%, #f2d38e 30%, #fff7de 45%, #e8b95c 60%, #a5741f 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 4px 24px #d9a44a66);
+  animation: master-shimmer 3.2s ease-in-out 1.4s infinite;
+}
+.master-show h2 .master-show-86 {
+  font-size: 1.18em;
+}
+#master-show-note {
+  margin: 12px 0 0;
+  font-size: 14px;
+  color: #eadcc0;
+  text-shadow: 0 1px 8px #000;
+  animation: master-fade-up 0.7s ease-out 1.1s both;
+}
+/* Line breaks fall between the two sentences. */
+#master-show-note span {
+  display: inline-block;
+}
+.master-show-foot {
+  width: min(100%, 880px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+.master-show-cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: clamp(4px, 1.2vw, 12px);
+  /* Room for the fan's lowered edge cards (up to 18px) above the button. */
+  padding-bottom: 18px;
+}
+.master-show-card {
+  flex: 0 1 calc((100% - (var(--count) - 1) * 8px) / var(--count));
+  max-width: min(96px, 12vh);
+  transform: translateY(var(--lift)) rotate(var(--tilt));
+  animation: master-card-in 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) calc(1.3s + var(--i) * 0.09s) both;
+}
+.master-show-card .game-card.art-card {
+  width: 100%;
+  box-shadow:
+    0 0 0 1px #f0cf8e88,
+    0 6px 22px #000c,
+    0 0 26px #e8b25a44;
+}
+.master-show-close {
+  min-width: 200px;
+  background: linear-gradient(115deg, #f5d99f, #d2a35d);
+  color: #231b0e;
+  box-shadow:
+    0 0 0 1px #ffdfad80,
+    0 0 28px #e7af4955;
+  animation: master-fade-up 0.6s ease-out 2.2s both;
+}
+.master-show.rival .master-show-eyebrow {
+  color: #d9c7a4;
+}
+@keyframes master-art-in {
+  from {
+    opacity: 0;
+    filter: brightness(2.2) saturate(0.6);
+  }
+  to {
+    opacity: 1;
+    filter: brightness(1) saturate(1);
+  }
+}
+@keyframes master-art-drift {
+  from {
+    transform: scale(1.12);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes master-rays {
+  from {
+    opacity: 0.55;
+    transform: rotate(-3deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(3deg);
+  }
+}
+@keyframes master-spark {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  12% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-95dvh) translateX(18px);
+  }
+}
+@keyframes master-title-in {
+  from {
+    opacity: 0;
+    transform: scale(1.35);
+    letter-spacing: 0.3em;
+    filter: blur(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    letter-spacing: 0.04em;
+    filter: blur(0);
+  }
+}
+@keyframes master-shimmer {
+  0%,
+  100% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+}
+@keyframes master-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes master-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(60px) rotate(0deg) scale(0.8);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 700px) {
+  .master-show-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.24em;
+  }
+  #master-show-note {
+    font-size: 12px;
+  }
+  .master-show-cards {
+    gap: 4px;
+  }
+}
+@media (max-height: 500px) {
+  .master-show-content {
+    padding-top: 14px;
+    padding-bottom: 12px;
+    gap: 6px;
+  }
+  .master-show h2 {
+    font-size: clamp(36px, 8vw, 64px);
+  }
+  #master-show-note {
+    margin-top: 4px;
+  }
+  .master-show-foot {
+    gap: 8px;
+  }
+  .master-show-card {
+    max-width: 58px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .master-finish .finish-heading:before,
+  .master-show *,
+  .master-show-art img {
+    animation: none !important;
+  }
+  .master-show-sparks {
+    display: none;
+  }
+}

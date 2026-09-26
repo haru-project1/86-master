@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#17191c" />
+    <title>カードコレクション | 86 MASTER</title>
+    <link rel="stylesheet" href="src/card-art.css" />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #151719;
+        --panel: #1d2023;
+        --ink: #f0eee6;
+        --muted: #9ca1a6;
+        --line: #363a3e;
+        --red: #df4c47;
+        --amber: #d1af70;
+        --blue: #94aec6;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Arial, 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+      }
+      button,
+      input {
+        font: inherit;
+      }
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+      button {
+        cursor: pointer;
+      }
+      a {
+        color: inherit;
+      }
+      button:focus-visible,
+      a:focus-visible {
+        outline: 3px solid var(--red);
+        outline-offset: 5px;
+      }
+      header {
+        border-bottom: 1px solid var(--line);
+        padding: 24px 4vw;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: center;
+      }
+      .brand {
+        text-decoration: none;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+      .brand b {
+        color: var(--red);
+        font-size: 36px;
+        font-style: italic;
+      }
+      .brand small {
+        display: block;
+        font-size: 8px;
+        letter-spacing: 0.3em;
+        margin-top: 4px;
+      }
+      header > a:last-child {
+        font-size: 12px;
+        text-decoration: none;
+        color: var(--muted);
+      }
+      main {
+        max-width: 1560px;
+        margin: auto;
+        padding: 56px 4vw 72px;
+      }
+      .eyebrow {
+        font-size: 10px;
+        letter-spacing: 0.24em;
+        color: var(--red);
+      }
+      .intro {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 24px;
+        margin-bottom: 36px;
+      }
+      h1 {
+        font-size: clamp(26px, 4vw, 46px);
+        letter-spacing: -0.04em;
+        margin: 14px 0;
+      }
+      p {
+        font-size: 13px;
+        line-height: 1.85;
+        color: var(--muted);
+        margin: 0;
+      }
+      .edition {
+        font-size: 11px;
+        color: var(--muted);
+        letter-spacing: 0.1em;
+        white-space: nowrap;
+        text-align: right;
+        line-height: 2;
+      }
+      .edition strong {
+        color: var(--ink);
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .filters {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        border-top: 1px solid var(--line);
+        padding: 22px 0 28px;
+      }
+      .filters button {
+        background: transparent;
+        border: 1px solid var(--line);
+        color: var(--muted);
+        border-radius: 3px;
+        font-size: 11px;
+        padding: 10px 15px;
+      }
+      .filters button[aria-pressed='true'] {
+        background: var(--ink);
+        color: var(--bg);
+        border-color: var(--ink);
+      }
+      .filters .count {
+        font-size: 10px;
+        opacity: 0.65;
+        margin-left: 8px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 32px 24px;
+      }
+      .card {
+        min-width: 0;
+      }
+      .card button {
+        display: block;
+        border: 0;
+        padding: 0;
+        width: 100%;
+        background: transparent;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 24px #0004;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .card button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 32px #0008;
+      }
+      .card img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 2/3;
+        object-fit: contain;
+        display: block;
+        background: var(--panel);
+      }
+      .card-meta {
+        padding: 14px 2px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: start;
+      }
+      .card h2 {
+        font-size: 13px;
+        margin: 0 0 5px;
+        font-weight: 600;
+      }
+      .card p {
+        font-size: 10px;
+      }
+      .badge {
+        border: 1px solid var(--line);
+        font-size: 10px;
+        letter-spacing: 0.03em;
+        padding: 3px 6px;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+      .badge.R {
+        border-color: #536a7b;
+        color: var(--blue);
+      }
+      .badge.SR,
+      .badge.SUPPORT {
+        border-color: #736345;
+        color: var(--amber);
+      }
+      .note {
+        border-top: 1px solid var(--line);
+        margin-top: 42px;
+        padding-top: 20px;
+        font-size: 11px;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 22px 4vw;
+        font-size: 10px;
+        color: var(--muted);
+        letter-spacing: 0.1em;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      dialog {
+        padding: 0;
+        border: 1px solid var(--line);
+        background: var(--bg);
+        color: var(--ink);
+        max-width: min(1040px, 94vw);
+        width: max-content;
+        max-height: 94vh;
+        overflow: auto;
+        box-shadow: 0 20px 80px #000b;
+      }
+      dialog::backdrop {
+        background: #050608de;
+        backdrop-filter: blur(6px);
+      }
+      .detail {
+        display: grid;
+        grid-template-columns: minmax(0, 520px) minmax(240px, 310px);
+        align-items: center;
+      }
+      .detail > img {
+        display: block;
+        width: 100%;
+        max-height: 88vh;
+        object-fit: contain;
+      }
+      .detail-copy {
+        padding: 35px 26px;
+      }
+      .detail-copy h2 {
+        font-size: 26px;
+        line-height: 1.4;
+        margin: 14px 0;
+      }
+      .detail-copy dl {
+        margin: 24px 0;
+        display: grid;
+        grid-template-columns: 75px 1fr;
+        font-size: 12px;
+        gap: 14px;
+      }
+      .detail-copy dt {
+        color: var(--muted);
+      }
+      .detail-copy dd {
+        margin: 0;
+      }
+      .detail-copy p {
+        font-size: 12px;
+      }
+      .detail-copy .download {
+        display: block;
+        margin-top: 26px;
+        background: var(--ink);
+        color: var(--bg);
+        padding: 13px;
+        text-align: center;
+        font-size: 12px;
+        text-decoration: none;
+      }
+      .close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background: #16191ee8;
+        color: var(--ink);
+        border: 1px solid var(--line);
+        width: 36px;
+        height: 36px;
+        font-size: 22px;
+      }
+      .error {
+        padding: 30px;
+        border: 1px solid var(--red);
+        grid-column: 1/-1;
+      }
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      @media (min-width: 1500px) {
+        .grid {
+          gap: 36px 30px;
+        }
+      }
+      @media (max-width: 950px) {
+        .grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 24px 16px;
+        }
+        .intro {
+          align-items: start;
+        }
+        .detail {
+          grid-template-columns: minmax(0, 400px) 250px;
+        }
+        .detail-copy {
+          padding: 30px 20px;
+        }
+      }
+      @media (max-width: 650px) {
+        header {
+          padding: 16px 5vw;
+        }
+        .brand b {
+          font-size: 30px;
+        }
+        main {
+          padding: 32px 5vw 44px;
+        }
+        .intro {
+          display: block;
+          margin-bottom: 24px;
+        }
+        .edition {
+          display: none;
+        }
+        .grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 26px 12px;
+        }
+        .filters {
+          gap: 6px;
+          padding: 18px 0 24px;
+        }
+        .filters button {
+          padding: 9px 10px;
+          font-size: 10px;
+        }
+        .card h2 {
+          font-size: 11px;
+        }
+        .card p {
+          font-size: 9px;
+        }
+        .card-meta {
+          gap: 5px;
+        }
+        .badge {
+          font-size: 8px;
+          padding: 3px;
+        }
+        .detail {
+          display: block;
+          max-width: 440px;
+        }
+        .detail > img {
+          max-height: 70vh;
+          width: 100%;
+        }
+        .detail-copy {
+          padding: 25px;
+        }
+        .detail-copy h2 {
+          font-size: 23px;
+        }
+        .note {
+          font-size: 10px;
+        }
+        footer {
+          font-size: 8px;
+        }
+      }
+      .detail-art {
+        position: relative;
+        align-self: start;
+        justify-self: center;
+        width: min(100%, calc(88vh * 2 / 3));
+        line-height: 0;
+      }
+      .detail-art > img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .detail-art .card-multiplier-label {
+        height: 100%;
+      }
+      .card button {
+        position: relative;
+        isolation: isolate;
+      }
+      .card button.foil-R {
+        box-shadow:
+          0 0 0 1px #9dd8f770,
+          0 8px 28px #1b77bf26;
+      }
+      .card button.foil-SR {
+        box-shadow:
+          0 0 0 1px #ffe2a999,
+          0 8px 30px #ce9a402b;
+      }
+      .card button.foil-R::after,
+      .card button.foil-SR::after {
+        content: '';
+        position: absolute;
+        inset: 0 0 27%;
+        pointer-events: none;
+        z-index: 1;
+        mix-blend-mode: screen;
+        transform: translateX(-130%);
+        background: linear-gradient(
+          115deg,
+          transparent 29%,
+          #b4e6ff12 41%,
+          #f2fbff80 49%,
+          #c3ecff24 54%,
+          transparent 67%
+        );
+        animation: foil-sweep 11s ease-in-out infinite;
+      }
+      .card button.foil-SR::after {
+        background: linear-gradient(
+          115deg,
+          transparent 25%,
+          #8ce9ff26 37%,
+          #eaaeff42 44%,
+          #ffffffad 49%,
+          #ffe9a352 54%,
+          #caffdb24 60%,
+          transparent 70%
+        );
+        animation-duration: 9s;
+      }
+      .card:nth-child(2n) button::after {
+        animation-delay: -3s;
+      }
+      .card:nth-child(3n) button::after {
+        animation-delay: -6s;
+      }
+      .shine-off .card button::after {
+        display: none;
+      }
+      body:has(dialog[open]) .card button::after {
+        animation-play-state: paused;
+      }
+      #shine-toggle {
+        margin-left: auto;
+        border-color: #736345;
+        color: var(--amber);
+        background: transparent;
+      }
+      #shine-toggle[aria-pressed='false'] {
+        border-color: var(--line);
+        color: var(--muted);
+      }
+      .rarity-note {
+        font-size: 11px;
+        margin: 0 0 24px;
+        color: var(--muted);
+      }
+      .rarity-note b {
+        color: var(--ink);
+        font-weight: 500;
+      }
+      @keyframes foil-sweep {
+        0%,
+        12% {
+          transform: translateX(-130%);
+          opacity: 0;
+        }
+        16% {
+          opacity: 1;
+        }
+        40% {
+          transform: translateX(130%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(130%);
+          opacity: 0;
+        }
+      }
+      @media (max-width: 650px) {
+        #shine-toggle {
+          margin-left: 0;
+        }
+        .rarity-note {
+          font-size: 10px;
+          line-height: 1.9;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .card button {
+          transition: none;
+        }
+        .card button::after {
+          display: none;
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="./"
+        ><b>86</b><span>MASTER<small>GARAGE SEVEN</small></span></a
+      ><a href="./">ゲームへ戻る ↗</a>
+    </header>
+    <main>
+      <div class="intro">
+        <div>
+          <span class="eyebrow">THE CARD COLLECTION / EDITION 02</span>
+          <h1>走りを、手札に。</h1>
+          <p>R・SRの6車種を、新しい背景と光沢のあるデザインに。カードを選ぶと拡大できます。</p>
+        </div>
+        <div class="edition"><strong>16</strong> DESIGNS<br />12 VEHICLES / 4 SUPPORTS</div>
+      </div>
+      <nav class="filters" aria-label="カードの種類">
+        <button type="button" data-filter="rare" aria-pressed="true">
+          R・SR 新デザイン<span class="count">6</span>
+        </button>
+        <button type="button" data-filter="all" aria-pressed="false">すべて<span class="count">16</span></button>
+        <button type="button" data-filter="C" aria-pressed="false">C · COMMON<span class="count">6</span></button>
+        <button type="button" data-filter="R" aria-pressed="false">R · RARE<span class="count">4</span></button>
+        <button type="button" data-filter="SR" aria-pressed="false">SR · SUPER RARE<span class="count">2</span></button>
+        <button type="button" data-filter="support" aria-pressed="false">サポート<span class="count">4</span></button>
+        <button type="button" id="shine-toggle" aria-pressed="true" aria-label="光沢アニメーションを切り替える">
+          光沢 ON ✦
+        </button>
+      </nav>
+      <p class="rarity-note">
+        <b>R</b>：ナイトサーキット × シルバー箔　／　<b>SR</b>：夕暮れの海岸 × ゴールド・ホログラム
+      </p>
+      <p id="status" class="visually-hidden" role="status">カードを読み込んでいます</p>
+      <div class="grid" id="cards"></div>
+      <p class="note">
+        各車種は代表の色・セッティングで掲載しています。レア度はゲーム内の設定です。サポートの加点は到達した段階の値となり、最高点の1枚だけが有効です。
+      </p>
+    </main>
+    <footer><span>86 MASTER — GARAGE SEVEN</span><span>CARD ART / EDITION 02</span></footer>
+    <dialog id="detail" aria-labelledby="detail-title">
+      <button type="button" class="close" aria-label="閉じる">×</button>
+      <div class="detail" id="detail-content"></div>
+    </dialog>
+    <script type="module">
+      import { SUPPORT_BY_ID, MODEL_BY_ID, SETTINGS } from './src/data.js';
+      import {
+        multiplierLabelMarkup,
+        settingIconMarkup,
+        settingLabelMarkup,
+        supportValueLabelMarkup,
+      } from './src/card-art.js';
+      // The manifest names the setting ("コーナー重視"); the game draws it by id.
+      const settingOf = (card) => SETTINGS.find((setting) => setting.name === card.setting)?.id;
+      const multiplierOverlay = (card) =>
+        card.type === 'support'
+          ? supportValueLabelMarkup({ type: card.type, supportId: card.id })
+          : settingLabelMarkup({ type: card.type, modelId: card.id, settingId: settingOf(card) }) +
+            multiplierLabelMarkup({ type: card.type, modelId: card.id });
+      const gallery = document.querySelector('#cards');
+      const dialog = document.querySelector('#detail');
+      const escape = (value) =>
+        String(value).replace(
+          /[&<>"']/g,
+          (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c],
+        );
+      let cards = [];
+      function render(filter = 'rare') {
+        const visible = cards.filter(
+          (card) =>
+            filter === 'all' ||
+            (filter === 'rare' && ['R', 'SR'].includes(card.rarity)) ||
+            card.rarity === filter ||
+            card.type === filter,
+        );
+        gallery.innerHTML = visible
+          .map(
+            (card) =>
+              `<article class="card"><button type="button" class="${['R', 'SR'].includes(card.rarity) ? 'foil-' + card.rarity : ''}" data-card="${escape(card.id)}" aria-label="${escape(card.name)}のデザインを拡大"><img src="${escape(card.image)}" alt="${escape(card.name)}のカードデザイン" width="1024" height="1536" loading="lazy" decoding="async">${multiplierOverlay(card)}</button><div class="card-meta"><div><h2>${escape(card.name)}</h2><p>${escape(card.type === 'vehicle' ? `${card.colorJa} · ${card.setting} · ${card.multiplier}` : card.condition)}</p></div><span class="badge ${card.rarity || 'SUPPORT'}">${card.rarity || 'SUPPORT'}</span></div></article>`,
+          )
+          .join('');
+        document.querySelector('#status').textContent = `${visible.length}種類のカードを表示`;
+      }
+      function show(card) {
+        const support = SUPPORT_BY_ID[card.id];
+        const details =
+          card.type === 'vehicle'
+            ? `<dl><dt>メーカー</dt><dd>${escape(card.maker)}</dd><dt>型式・世代</dt><dd>${escape(card.generation)}</dd><dt>色</dt><dd>${escape(card.colorJa)}</dd><dt>設定</dt><dd>${settingOf(card) ? settingIconMarkup(settingOf(card)) : ''}${escape(card.setting)}</dd><dt>車種倍率</dt><dd>${escape(card.multiplier)}</dd></dl>`
+            : `<p>${escape(support.description)}</p><dl>${support.levels.map((level) => `<dt>${level.count}${card.id === 'ecu' ? '組' : card.id === 'tires' ? '車種' : '枚'}</dt><dd>＋${level.points}点</dd>`).join('')}</dl><p>サポートは最高点の1枚だけが有効です。</p>`;
+        document.querySelector('#detail-content').innerHTML =
+          `<div class="detail-art"><img src="${escape(card.image)}" alt="${escape(card.name)}のカードデザイン" width="1024" height="1536">${multiplierOverlay(card)}</div><div class="detail-copy"><span class="eyebrow">${card.type === 'vehicle' ? 'VEHICLE CARD' : 'SUPPORT CARD'}</span><h2 id="detail-title">${escape(card.name)}</h2><span class="badge ${card.rarity || 'SUPPORT'}">${card.rarity || 'SUPPORT'}</span>${details}<a class="download" href="${escape(card.image)}" download="${escape(card.file)}">制作時の原画PNGを保存 ↓</a><p>画面の倍率と設定のアイコンは現行ルールに対応しています。原画は制作時の表記です。</p></div>`;
+        dialog.showModal();
+      }
+      document.querySelector('.filters').addEventListener('click', (event) => {
+        const button = event.target.closest('[data-filter]');
+        if (!button) return;
+        document
+          .querySelectorAll('[data-filter]')
+          .forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        render(button.dataset.filter);
+      });
+      document.querySelector('#shine-toggle').addEventListener('click', (event) => {
+        const enabled = document.body.classList.toggle('shine-off') === false;
+        event.currentTarget.setAttribute('aria-pressed', String(enabled));
+        event.currentTarget.textContent = enabled ? '光沢 ON ✦' : '光沢 OFF';
+      });
+      gallery.addEventListener('click', (event) => {
+        const button = event.target.closest('[data-card]');
+        if (button) show(cards.find((card) => card.id === button.dataset.card));
+      });
+      dialog.querySelector('.close').addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) {
+          const rect = dialog.getBoundingClientRect();
+          if (
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom
+          )
+            dialog.close();
+        }
+      });
+      try {
+        const response = await fetch('assets/cards/production-v2/manifest.json');
+        if (!response.ok) throw new Error('manifest');
+        // Manifest paths start at the site root; use them relative to this page.
+        cards = (await response.json()).cards.map((card) => ({
+          ...card,
+          image: card.image.replace(/^\//, ''),
+          ...(card.type === 'vehicle' ? { multiplier: '×' + MODEL_BY_ID[card.id].multiplier } : {}),
+        }));
+        render();
+      } catch {
+        gallery.innerHTML = '<p class="error">カードを読み込めませんでした。ページを再読み込みしてください。</p>';
+        document.querySelector('#status').textContent = '読み込みに失敗しました';
+      }
+    </script>
+  </body>
+</html>
